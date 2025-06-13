@@ -1,0 +1,66 @@
+/* demo.css */
+
+main {
+  margin-top: 80px; /* ajuste selon la hauteur réelle de ta navbar */
+}
+
+
+/* Style général */
+body {
+  background-color: #f8f9fa;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Titre */
+h2 {
+  color: #0d6efd;
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  margin-top: 50px;
+}
+
+/* Formulaire */
+form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Labels */
+form label {
+  font-weight: 500;
+}
+
+/* Bouton */
+form button {
+  padding: 12px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+}
+
+/* Inputs */
+form input, form textarea {
+  border-radius: 6px;
+}
+
+/* Focus */
+form input:focus, form textarea:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+/* Navbar fixe - espace en haut du contenu */
+main {
+  padding-top: 70px;
+}
+
+/* Responsive ajustement */
+@media (max-width: 576px) {
+  form {
+    padding: 20px;
+  }
+}
