@@ -5,83 +5,145 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Nova Tech - Équipe</title>
 
-  <!-- Bootstrap 5 CSS -->
   <link 
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
     rel="stylesheet" 
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
     crossorigin="anonymous"
   />
-  <link rel="stylesheet" href="css/style.css" />
+  
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  
   <style>
-    /* Hero style */
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f5f7fa;
+      color: #222;
+    }
+    .navbar {
+      background-color: #0a2540 !important;
+    }
+    .navbar-brand {
+      font-weight: 700;
+      font-size: 1.5rem;
+      letter-spacing: 1.5px;
+      color: #00a8ff !important;
+    }
+    .nav-link {
+      color: #cbd5e1 !important;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    .nav-link:hover, .nav-link.active {
+      color: #00a8ff !important;
+    }
+
     .hero {
-      background: url('img/team-hero.jpg') center/cover no-repeat;
-      height: 400px;
+      background: linear-gradient(rgba(10, 37, 64, 0.85), rgba(10, 37, 64, 0.85)), 
+                  url('img/team-hero.jpg') center/cover no-repeat;
+      height: 420px;
       display: flex;
       align-items: center;
       color: white;
-      position: relative;
+      padding-left: 3rem;
     }
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.55);
-      z-index: 0;
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 900;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.6);
     }
-    .hero-content {
-      position: relative;
-      z-index: 1;
-      max-width: 700px;
-      padding-left: 2rem;
+    .hero p {
+      font-size: 1.3rem;
+      font-weight: 400;
+      max-width: 600px;
+      text-shadow: 0 1px 8px rgba(0,0,0,0.5);
     }
-    /* Cards équipe */
-    .team-member {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      border-radius: 0.75rem;
-      overflow: hidden;
-      box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
-      background-color: white;
-    }
-    .team-member:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 10px 20px rgb(0 0 0 / 0.15);
-    }
-    .team-photo {
-      width: 100%;
-      height: 280px;
-      object-fit: cover;
-    }
-    .member-info {
-      padding: 1rem;
+
+    /* Section équipe */
+    .team-section {
+      padding: 4rem 0;
+      max-width: 1100px;
+      margin: 0 auto;
       text-align: center;
     }
-    .member-name {
+    .team-section h2 {
+      font-weight: 900;
+      font-size: 2.8rem;
+      margin-bottom: 2.5rem;
+      color: #0a2540;
+    }
+    .team-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+    .team-card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      width: 260px;
+      padding: 1.5rem 1.2rem 2rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: default;
+    }
+    .team-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    }
+    .team-photo {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      border: 4px solid #00a8ff;
+      transition: transform 0.4s ease;
+    }
+    .team-card:hover .team-photo {
+      transform: scale(1.05);
+    }
+    .team-name {
       font-weight: 700;
-      font-size: 1.25rem;
-      margin-bottom: 0.25rem;
+      font-size: 1.3rem;
+      margin-bottom: 0.2rem;
+      color: #0a2540;
     }
-    .member-role {
+    .team-role {
+      font-weight: 600;
       font-size: 1rem;
-      color: #6c757d;
-      margin-bottom: 0.5rem;
+      color: #007acc;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
-    .social-icons a {
-      color: #0d6efd;
-      margin: 0 0.25rem;
-      font-size: 1.2rem;
-      transition: color 0.3s;
+    .team-bio {
+      font-size: 0.95rem;
+      color: #344054;
+      line-height: 1.5;
     }
-    .social-icons a:hover {
-      color: #084298;
+
+    /* Footer */
+    footer {
+      background-color: #0a2540;
+      color: #cbd5e1;
+      font-weight: 500;
+      font-size: 0.9rem;
+      padding: 1rem 0;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .team-cards {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
       <a class="navbar-brand fw-bold" href="#">Nova Tech</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -99,89 +161,54 @@
     </div>
   </nav>
 
-  <!-- Hero -->
   <section class="hero mt-5">
     <div class="container hero-content">
-      <h1 class="display-4 fw-bold">Notre équipe</h1>
-      <p class="lead">Les passionnés derrière Nova Tech, engagés pour l’innovation agricole.</p>
+      <h1>Rencontrez notre équipe</h1>
+      <p>Des passionnés d’innovation et de technologie dédiés à votre succès.</p>
     </div>
   </section>
 
-  <!-- Membres de l'équipe -->
-  <section class="py-5">
-    <div class="container">
-      <div class="row g-4 justify-content-center">
-
-        <!-- Membre 1 -->
-        <div class="col-md-4 col-sm-6">
-          <div class="team-member">
-            <img src="assets/team/dina-misme.jpg" alt="Dina Misme" class="team-photo" />
-            <div class="member-info">
-              <h3 class="member-name">Dina Misme</h3>
-              <p class="member-role">CEO & Fondatrice</p>
-              <p>Dina est la visionnaire qui a fondé Nova Tech, experte en agriculture connectée et innovation durable.</p>
-              <div class="social-icons">
-                <a href="#" aria-label="LinkedIn Dina Misme"><i class="bi bi-linkedin"></i></a>
-                <a href="#" aria-label="Twitter Dina Misme"><i class="bi bi-twitter"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Membre 2 -->
-        <div class="col-md-4 col-sm-6">
-          <div class="team-member">
-            <img src="assets/team/beaucoop.jpg" alt="Beaucoop" class="team-photo" />
-            <div class="member-info">
-              <h3 class="member-name">Beaucoop</h3>
-              <p class="member-role">Directeur Technique</p>
-              <p>Spécialiste des drones et technologies embarquées, Beaucoop dirige le développement technique.</p>
-              <div class="social-icons">
-                <a href="#" aria-label="LinkedIn Beaucoop"><i class="bi bi-linkedin"></i></a>
-                <a href="#" aria-label="GitHub Beaucoop"><i class="bi bi-github"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Membre 3 -->
-        <div class="col-md-4 col-sm-6">
-          <div class="team-member">
-            <img src="assets/team/effect-speciaux.jpg" alt="Effect Speciaux" class="team-photo" />
-            <div class="member-info">
-              <h3 class="member-name">Effect Speciaux</h3>
-              <p class="member-role">Responsable Effets Spéciaux</p>
-              <p>En charge des démonstrations visuelles et des animations, Effect donne vie à nos projets.</p>
-              <div class="social-icons">
-                <a href="#" aria-label="Instagram Effect Speciaux"><i class="bi bi-instagram"></i></a>
-                <a href="#" aria-label="Facebook Effect Speciaux"><i class="bi bi-facebook"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
+  <section class="team-section">
+    <h2>Notre équipe</h2>
+    <div class="team-cards">
+      <div class="team-card">
+        <img src="assets/team/alice.jpg" alt="Alice Dupont" class="team-photo" />
+        <div class="team-name">Alice Dupont</div>
+        <div class="team-role">CEO & Fondatrice</div>
+        <p class="team-bio">Alice dirige Nova Tech avec passion et vision depuis sa création en 2022. Experte en innovation agricole et management.</p>
+      </div>
+      <div class="team-card">
+        <img src="assets/team/karim.jpg" alt="Karim Traoré" class="team-photo" />
+        <div class="team-name">Karim Traoré</div>
+        <div class="team-role">CTO</div>
+        <p class="team-bio">Karim est le maître d’œuvre technique, responsable du développement des solutions drones intelligentes.</p>
+      </div>
+      <div class="team-card">
+        <img src="assets/team/sophie.jpg" alt="Sophie Koné" class="team-photo" />
+        <div class="team-name">Sophie Koné</div>
+        <div class="team-role">Responsable Marketing</div>
+        <p class="team-bio">Sophie supervise les stratégies marketing et la communication pour connecter Nova Tech à ses clients et partenaires.</p>
+      </div>
+      <div class="team-card">
+        <img src="assets/team/mamadou.jpg" alt="Mamadou Diallo" class="team-photo" />
+        <div class="team-name">Mamadou Diallo</div>
+        <div class="team-role">Ingénieur R&D</div>
+        <p class="team-bio">Mamadou conçoit et teste les technologies innovantes pour améliorer la performance et la fiabilité des drones Nova Tech.</p>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-dark text-white text-center py-3">
+  <footer>
     <div class="container">
       <p class="mb-0">&copy; 2025 Nova Tech. Tous droits réservés.</p>
     </div>
   </footer>
 
-  <!-- Bootstrap JS & Icons -->
   <script 
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-ENjdO4Dr2bkBIFxQpeo5G6Vj6tA2M4ecxZ1Zr20E/qku82qA9T+6X/7kG3ni41iN" 
     crossorigin="anonymous"
   ></script>
 
-  <!-- Bootstrap Icons CDN -->
-  <link 
-    rel="stylesheet" 
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
-  />
 </body>
 </html>
