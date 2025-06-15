@@ -13,30 +13,131 @@
     crossorigin="anonymous"
   >
 
-  <!-- Ton style CSS perso -->
+  <!-- Ton style CSS personnalisé -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
+
+
+
 <body>
 
-  <!-- ✅ En-tête de page -->
-  <header class="bg-dark text-white p-4">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
-      <h1 class="h3">Nova Tech</h1>
-      <p class="mb-0">Construisons l’avenir de la technologie en Afrique.</p>
+      <a class="navbar-brand" href="#">Nova Tech</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
+          <li class="nav-item"><a class="nav-link" href="team.html">Équipe</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
     </div>
-  </header>
+  </nav>
 
-  <!-- ✅ Contenu principal -->
-  <main class="container my-5">
-    <h2 class="text-primary">Bienvenue chez Nova Tech</h2>
-    <p class="lead">Nous développons des solutions technologiques innovantes pour transformer le quotidien.</p>
-    <a class="btn btn-primary" href="#">En savoir plus</a>
-  </main>
 
-  <!-- ✅ Pied de page -->
-  <footer class="bg-light text-center py-3">
-    <small>&copy; 2025 Nova Tech. Tous droits réservés.</small>
-  </footer>
+<header class="hero-image">
+  <div class="hero-background"></div> <!-- ✨ Image zoomée uniquement ici -->
+  <div class="container hero-text">
+    <h2 class="display-4">Nova Tech</h2>
+    <p class="lead">Le drone intelligent pour la surveillance agricole en temps réel.</p>
+    <a href="services.html" class="btn btn-light mt-3">Découvrir nos services</a>
+  </div>
+</header>
+
+
+<!-- SECTION 2 : Nos solutions innovantes -->
+
+<section class="py-5">
+  <div class="container">
+    <h2 class="section-title text-center mb-5">Nos solutions innovantes</h2>
+    <div class="row text-center">
+
+      <!-- Suivi des cultures -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm hover-zoom">
+          <div class="card-body">
+            <div class="icon-chip mx-auto mb-3">
+              <!-- Icône feuille/plante -->
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#0d6efd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2C7 7 5 12 12 22C19 12 17 7 12 2Z"></path>
+                <line x1="12" y1="2" x2="12" y2="22"></line>
+              </svg>
+            </div>
+            <h5 class="card-title">Suivi des cultures</h5>
+            <p class="card-text">
+              Surveillez en temps réel la croissance et la santé de vos plantations grâce à nos capteurs intelligents et à l’analyse de données précises.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cartographie des champs -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm hover-zoom">
+          <div class="card-body">
+            <div class="icon-chip mx-auto mb-3">
+              <!-- Icône carte avec marqueur -->
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#0d6efd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="1 6 9 3 15 6 23 3 23 18 15 21 9 18 1 21 1 6"></polygon>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </div>
+            <h5 class="card-title">Cartographie des champs</h5>
+            <p class="card-text">
+              Générez des cartes détaillées de vos parcelles agricoles pour mieux planifier les interventions et optimiser vos rendements.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Applications à taux variable -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm hover-zoom">
+          <div class="card-body">
+            <div class="icon-chip mx-auto mb-3">
+              <!-- Icône graphique ou goutte réglable -->
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#0d6efd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2C9 5 7 9 7 13a5 5 0 0 0 10 0c0-4-3-7-5-11z"></path>
+                <line x1="12" y1="13" x2="12" y2="22"></line>
+                <polyline points="9 18 12 15 15 18"></polyline>
+              </svg>
+            </div>
+            <h5 class="card-title">Applications à taux variable</h5>
+            <p class="card-text">
+              Adaptez automatiquement la quantité d’engrais, d’eau ou de pesticides appliquée selon les besoins spécifiques de chaque zone de votre exploitation.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<footer class="bg-dark text-white text-center py-3">
+    <div class="container">
+      <p>&copy; 2025 Nova Tech. Tous droits réservés.</p>
+    </div>
+</footer>
+
+ 
+
+
+  
+
+  
 
   <!-- ✅ Bootstrap JS CDN + ton script -->
   <script 

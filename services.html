@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services - Nova Tech</title>
+
+  <!-- Bootstrap 5 CSS CDN -->
+  <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+    crossorigin="anonymous"
+  >
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+
+  <!-- Style CSS personnalisé -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/services.css" />
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Nova Tech</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
+          <li class="nav-item"><a class="nav-link" href="team.html">Équipe</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section Services -->
+  <section class="services-hero">
+    <div class="container">
+      <div class="row align-items-center min-vh-100">
+        <div class="col-lg-6">
+          <div class="hero-content">
+            <h1 class="display-3 fw-bold mb-4">Nos Services</h1>
+            <p class="lead mb-4">
+              Découvrez notre gamme complète de solutions technologiques pour révolutionner votre agriculture. 
+              De la surveillance intelligente à l'analyse prédictive, nous transformons vos données en actions concrètes.
+            </p>
+            <div class="hero-stats d-flex gap-4">
+              <div class="stat-item">
+                <h3 class="fw-bold text-primary">500+</h3>
+                <p class="mb-0">Hectares surveillés</p>
+              </div>
+              <div class="stat-item">
+                <h3 class="fw-bold text-primary">98%</h3>
+                <p class="mb-0">Précision des données</p>
+              </div>
+              <div class="stat-item">
+                <h3 class="fw-bold text-primary">24/7</h3>
+                <p class="mb-0">Surveillance continue</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="hero-image-container">
+            <img src="https://images.pexels.com/photos/442587/pexels-photo-442587.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                 alt="Drone agricole en action" class="img-fluid rounded-4 shadow-lg">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Principaux -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Services Principaux</h2>
+        <p class="lead text-muted">Solutions complètes pour l'agriculture de précision</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Service 1: Surveillance Intelligente -->
+        <div class="col-lg-4 col-md-6">
+          <div class="service-card h-100">
+            <div class="service-icon">
+              <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M12 1v6m0 6v6"></path>
+                <path d="m21 12-6-3-6 3-6-3"></path>
+              </svg>
+            </div>
+            <h4 class="service-title">Surveillance Intelligente</h4>
+            <p class="service-description">
+              Monitoring en temps réel de vos cultures avec des capteurs IoT avancés et analyse automatisée des données.
+            </p>
+            <ul class="service-features">
+              <li>Capteurs multispectraux</li>
+              <li>Alertes automatiques</li>
+              <li>Tableau de bord en temps réel</li>
+              <li>Historique des données</li>
+            </ul>
+            <div class="service-price">
+              <span class="price">À partir de 299€/mois</span>
+            </div>
+            <div class="text-center mt-3">
+              <button class="btn btn-primary btn-lg w-100 pay-btn" 
+                      data-service="Surveillance Intelligente" 
+                      data-price="299" 
+                      data-description="Monitoring en temps réel avec capteurs IoT">
+                <i class="bi bi-credit-card me-2"></i>Commander maintenant
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 2: Cartographie Avancée -->
+        <div class="col-lg-4 col-md-6">
+          <div class="service-card h-100 featured">
+            <div class="featured-badge">Populaire</div>
+            <div class="service-icon">
+              <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="1 6 9 3 15 6 23 3 23 18 15 21 9 18 1 21 1 6"></polygon>
+                <line x1="9" y1="9" x2="9" y2="18"></line>
+                <line x1="15" y1="9" x2="15" y2="18"></line>
+              </svg>
+            </div>
+            <h4 class="service-title">Cartographie Avancée</h4>
+            <p class="service-description">
+              Création de cartes haute résolution avec analyse topographique et identification des zones problématiques.
+            </p>
+            <ul class="service-features">
+              <li>Cartes 3D haute résolution</li>
+              <li>Analyse de végétation NDVI</li>
+              <li>Détection des maladies</li>
+              <li>Planification des interventions</li>
+            </ul>
+            <div class="service-price">
+              <span class="price">À partir de 499€/mois</span>
+            </div>
+            <div class="text-center mt-3">
+              <button class="btn btn-primary btn-lg w-100 pay-btn" 
+                      data-service="Cartographie Avancée" 
+                      data-price="499" 
+                      data-description="Cartes 3D haute résolution avec analyse NDVI">
+                <i class="bi bi-credit-card me-2"></i>Commander maintenant
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 3: Agriculture de Précision -->
+        <div class="col-lg-4 col-md-6">
+          <div class="service-card h-100">
+            <div class="service-icon">
+              <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2C9 5 7 9 7 13a5 5 0 0 0 10 0c0-4-3-7-5-11z"></path>
+                <path d="M12 22v-4"></path>
+                <path d="M8 18h8"></path>
+              </svg>
+            </div>
+            <h4 class="service-title">Agriculture de Précision</h4>
+            <p class="service-description">
+              Optimisation des ressources avec application ciblée d'engrais, pesticides et irrigation automatisée.
+            </p>
+            <ul class="service-features">
+              <li>Application à taux variable</li>
+              <li>Optimisation des ressources</li>
+              <li>Réduction des coûts</li>
+              <li>Amélioration des rendements</li>
+            </ul>
+            <div class="service-price">
+              <span class="price">À partir de 699€/mois</span>
+            </div>
+            <div class="text-center mt-3">
+              <button class="btn btn-primary btn-lg w-100 pay-btn" 
+                      data-service="Agriculture de Précision" 
+                      data-price="699" 
+                      data-description="Optimisation des ressources avec application ciblée">
+                <i class="bi bi-credit-card me-2"></i>Commander maintenant
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal de Paiement -->
+  <div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title" id="paymentModalLabel">
+            <i class="bi bi-shield-check me-2"></i>Paiement Sécurisé
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Résumé de la commande -->
+          <div class="order-summary mb-4">
+            <h6 class="fw-bold mb-3">Résumé de votre commande</h6>
+            <div class="card bg-light">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <h6 class="mb-1" id="selected-service">Service sélectionné</h6>
+                    <small class="text-muted" id="selected-description">Description du service</small>
+                  </div>
+                  <div class="text-end">
+                    <span class="h5 text-primary mb-0" id="selected-price">0€</span>
+                    <small class="text-muted d-block">/mois</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formulaire de paiement -->
+          <form id="payment-form">
+            <div class="row">
+              <!-- Informations personnelles -->
+              <div class="col-md-6">
+                <h6 class="fw-bold mb-3">Informations personnelles</h6>
+                <div class="mb-3">
+                  <label for="firstName" class="form-label">Prénom *</label>
+                  <input type="text" class="form-control" id="firstName" required>
+                </div>
+                <div class="mb-3">
+                  <label for="lastName" class="form-label">Nom *</label>
+                  <input type="text" class="form-control" id="lastName" required>
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email *</label>
+                  <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="mb-3">
+                  <label for="phone" class="form-label">Téléphone</label>
+                  <input type="tel" class="form-control" id="phone">
+                </div>
+              </div>
+
+              <!-- Informations de paiement -->
+              <div class="col-md-6">
+                <h6 class="fw-bold mb-3">Informations de paiement</h6>
+                <div class="mb-3">
+                  <label for="cardNumber" class="form-label">Numéro de carte *</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19" required>
+                    <span class="input-group-text">
+                      <i class="bi bi-credit-card text-primary"></i>
+                    </span>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-6">
+                    <label for="expiryDate" class="form-label">Date d'expiration *</label>
+                    <input type="text" class="form-control" id="expiryDate" placeholder="MM/AA" maxlength="5" required>
+                  </div>
+                  <div class="col-6">
+                    <label for="cvv" class="form-label">CVV *</label>
+                    <input type="text" class="form-control" id="cvv" placeholder="123" maxlength="4" required>
+                  </div>
+                </div>
+                <div class="mt-3">
+                  <label for="cardName" class="form-label">Nom sur la carte *</label>
+                  <input type="text" class="form-control" id="cardName" required>
+                </div>
+              </div>
+            </div>
+
+            <!-- Adresse de facturation -->
+            <div class="mt-4">
+              <h6 class="fw-bold mb-3">Adresse de facturation</h6>
+              <div class="row">
+                <div class="col-md-8">
+                  <label for="address" class="form-label">Adresse *</label>
+                  <input type="text" class="form-control" id="address" required>
+                </div>
+                <div class="col-md-4">
+                  <label for="postalCode" class="form-label">Code postal *</label>
+                  <input type="text" class="form-control" id="postalCode" required>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-md-6">
+                  <label for="city" class="form-label">Ville *</label>
+                  <input type="text" class="form-control" id="city" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="country" class="form-label">Pays *</label>
+                  <select class="form-select" id="country" required>
+                    <option value="">Sélectionner un pays</option>
+                    <option value="FR" selected>France</option>
+                    <option value="BE">Belgique</option>
+                    <option value="CH">Suisse</option>
+                    <option value="CA">Canada</option>
+                    <option value="MA">Maroc</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- Conditions -->
+            <div class="mt-4">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="terms" required>
+                <label class="form-check-label" for="terms">
+                  J'accepte les <a href="#" class="text-primary">conditions générales</a> et la <a href="#" class="text-primary">politique de confidentialité</a> *
+                </label>
+              </div>
+              <div class="form-check mt-2">
+                <input class="form-check-input" type="checkbox" id="newsletter">
+                <label class="form-check-label" for="newsletter">
+                  Je souhaite recevoir les actualités et offres spéciales de Nova Tech
+                </label>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <div class="w-100">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <span class="text-muted">Total à payer :</span>
+              <span class="h4 text-primary mb-0" id="total-price">0€/mois</span>
+            </div>
+            <div class="d-flex gap-2">
+              <button type="button" class="btn btn-outline-secondary flex-fill" data-bs-dismiss="modal">
+                Annuler
+              </button>
+              <button type="button" class="btn btn-primary flex-fill" id="process-payment">
+                <i class="bi bi-shield-lock me-2"></i>Payer maintenant
+              </button>
+            </div>
+            <div class="text-center mt-2">
+              <small class="text-muted">
+                <i class="bi bi-shield-check text-success me-1"></i>
+                Paiement sécurisé SSL 256-bit
+              </small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+  <!-- Solutions Spécialisées -->
+  <section class="py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Solutions Spécialisées</h2>
+        <p class="lead text-muted">Expertise sectorielle pour des besoins spécifiques</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <div class="specialized-service">
+            <div class="row align-items-center">
+              <div class="col-md-4">
+                <img src="https://images.pexels.com/photos/1595104/pexels-photo-1595104.jpeg?auto=compress&cs=tinysrgb&w=400" 
+                     alt="Viticulture" class="img-fluid rounded-3">
+              </div>
+              <div class="col-md-8">
+                <h4 class="fw-bold mb-3">Viticulture de Précision</h4>
+                <p class="mb-3">Solutions spécialisées pour la surveillance des vignobles avec analyse de maturité et détection précoce des maladies.</p>
+                <ul class="list-unstyled">
+                  <li><i class="bi bi-check-circle-fill text-success me-2"></i>Analyse de maturité des raisins</li>
+                  <li><i class="bi bi-check-circle-fill text-success me-2"></i>Détection du mildiou</li>
+                  <li><i class="bi bi-check-circle-fill text-success me-2"></i>Optimisation des vendanges</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="specialized-service">
+            <div class="row align-items-center">
+              <div class="col-md-4">
+                <img src="https://images.pexels.com/photos/1595108/pexels-photo-1595108.jpeg?auto=compress&cs=tinysrgb&w=400" 
+                     alt="Céréales" class="img-fluid rounded-3">
+              </div>
+              <div class="col-md-8">
+                <h4 class="fw-bold mb-3">Grandes Cultures</h4>
+                <p class="mb-3">Monitoring des céréales et oléagineux avec prédiction des rendements et optimisation des intrants.</p>
+                <ul class="list-unstyled">
+                  <li><i class="bi bi-check-circle-fill text-success me-2"></i>Prédiction des rendements</li>
+                  <li><i class="bi bi-check-circle-fill text-success me-2"></i>Comptage des plants</li>
+                  <li><i class="bi bi-check-circle-fill text-success me-2"></i>Détection des adventices</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="specialized-service">
+            <div class="row align-items-center">
+              <div class="col-md-4">
+                <img src="https://images.pexels.com/photos/1459505/pexels-photo-1459505.jpeg?auto=compress&cs=tinysrgb&w=400" 
+                     alt="Maraîchage" class="img-fluid rounded-3">
+              </div>
+              <div class="col-md-8">
+                <h4 class="fw-bold mb-3">Maraîchage Intensif</h4>
+                <p class="mb-3">Solutions pour les cultures légumières avec surveillance micro-climatique et irrigation de précision.</p>
+                <ul class="list-unstyled">
+                  <li><i class="bi bi-check-circle-fill text-success me-2"></i>Micro-climat en temps réel</li>
+                  <li><i class="bi bi-check-circle-fill text-success me-2"></i>Irrigation automatisée</li>
+                  <li><i class="bi bi-check-circle-fill text-success me-2"></i>Traçabilité complète</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="specialized-service">
+            <div class="row align-items-center">
+              <div class="col-md-4">
+                <img src="https://images.pexels.com/photos/1595108/pexels-photo-1595108.jpeg?auto=compress&cs=tinysrgb&w=400" 
+                     alt="Arboriculture" class="img-fluid rounded-3">
+              </div>
+              <div class="col-md-8">
+                <h4 class="fw-bold mb-3">Arboriculture</h4>
+                <p class="mb-3">Surveillance des vergers avec analyse de la santé des arbres et optimisation des traitements phytosanitaires.</p>
+                <ul class="list-unstyled">
+                  <li><i class="bi bi-check-circle-fill text-success me-2"></i>Santé des arbres</li>
+                  <li><i class="bi bi-check-circle-fill text-success me-2"></i>Détection des parasites</li>
+                  <li><i class="bi bi-check-circle-fill text-success me-2"></i>Optimisation des récoltes</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Processus de Travail -->
+  <section class="py-5 bg-primary text-white">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title text-white">Notre Processus</h2>
+        <p class="lead">De l'analyse à l'action, découvrez notre méthodologie éprouvée</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-6">
+          <div class="process-step text-center">
+            <div class="step-number">01</div>
+            <h4 class="step-title">Analyse</h4>
+            <p class="step-description">Évaluation complète de vos besoins et de votre exploitation</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="process-step text-center">
+            <div class="step-number">02</div>
+            <h4 class="step-title">Installation</h4>
+            <p class="step-description">Déploiement des capteurs et configuration du système</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="process-step text-center">
+            <div class="step-number">03</div>
+            <h4 class="step-title">Monitoring</h4>
+            <p class="step-description">Surveillance continue et collecte de données en temps réel</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="process-step text-center">
+            <div class="step-number">04</div>
+            <h4 class="step-title">Optimisation</h4>
+            <p class="step-description">Analyse des données et recommandations personnalisées</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h2 class="display-5 fw-bold mb-4">Prêt à révolutionner votre agriculture ?</h2>
+          <p class="lead mb-4">
+            Rejoignez les centaines d'agriculteurs qui ont déjà fait confiance à Nova Tech pour optimiser leurs rendements et réduire leurs coûts.
+          </p>
+          <div class="d-flex gap-3 justify-content-center flex-wrap">
+            <a href="contact.html" class="btn btn-primary btn-lg px-4">Demander un devis</a>
+            <a href="demo.html" class="btn btn-outline-primary btn-lg px-4">Planifier une démo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    <div class="container">
+      <p>&copy; 2025 Nova Tech. Tous droits réservés.</p>
+   </div>
+
+<!-- Modal Choix Paiement -->
+<div class="modal fade" id="choosePaymentModal" tabindex="-1" aria-labelledby="choosePaymentModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="choosePaymentModalLabel">Choisissez votre mode de paiement</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+      </div>
+      <div class="modal-body text-center">
+        <button type="button" class="btn btn-primary w-100 mb-3" id="payByCard">
+          <i class="bi bi-credit-card me-2"></i>Payer par carte bancaire
+        </button>
+        <button type="button" class="btn btn-warning w-100" id="payByPaypal">
+          <i class="bi bi-paypal me-2"></i>Payer avec PayPal
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Paiement classique (carte bancaire) -->
+<div class="modal fade" id="paymentModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Payer le service</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+      </div>
+      <div class="modal-body">
+        <p>Service : <span id="selected-service"></span></p>
+        <p>Description : <span id="selected-description"></span></p>
+        <p>Prix : <span id="selected-price"></span></p>
+        <p>Total : <span id="total-price"></span></p>
+
+        <form id="payment-form">
+          <div class="mb-3">
+            <label for="cardNumber" class="form-label">Numéro de carte</label>
+            <input type="text" class="form-control" id="cardNumber" required pattern="\d{16}" placeholder="0000 0000 0000 0000">
+          </div>
+          <div class="mb-3">
+            <label for="cardExpiry" class="form-label">Date d'expiration</label>
+            <input type="text" class="form-control" id="cardExpiry" required pattern="\d{2}/\d{2}" placeholder="MM/AA">
+          </div>
+          <div class="mb-3">
+            <label for="cardCVC" class="form-label">CVC</label>
+            <input type="text" class="form-control" id="cardCVC" required pattern="\d{3}" placeholder="123">
+          </div>
+          <button type="submit" id="process-payment" class="btn btn-success w-100">Payer maintenant</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Script pour gérer l'ouverture des modals et l'affichage conditionnel
+
+  document.addEventListener('DOMContentLoaded', () => {
+    let selectedService = null;
+
+    const chooseModalEl = document.getElementById('choosePaymentModal');
+    const paymentModalEl = document.getElementById('paymentModal');
+    const chooseModal = new bootstrap.Modal(chooseModalEl);
+    const paymentModal = new bootstrap.Modal(paymentModalEl);
+
+    // Ouvre modal choix paiement au clic sur "Commander maintenant"
+    document.querySelectorAll('.pay-btn').forEach(btn => {
+      btn.addEventListener('click', e => {
+        e.preventDefault();
+
+        selectedService = {
+          name: btn.getAttribute('data-service'),
+          price: btn.getAttribute('data-price'),
+          description: btn.getAttribute('data-description')
+        };
+
+        chooseModal.show();
+      });
+    });
+
+    // Choix payer par carte : ferme choix modal, ouvre modal paiement classique
+    document.getElementById('payByCard').addEventListener('click', () => {
+      chooseModal.hide();
+
+      if (selectedService) {
+        document.getElementById('selected-service').textContent = selectedService.name;
+        document.getElementById('selected-description').textContent = selectedService.description;
+        document.getElementById('selected-price').textContent = selectedService.price + '€';
+        document.getElementById('total-price').textContent = selectedService.price + '€/mois';
+      }
+
+      paymentModal.show();
+    });
+
+    // Choix payer par PayPal (alerte pour l'instant)
+    document.getElementById('payByPaypal').addEventListener('click', () => {
+      chooseModal.hide();
+      alert("Paiement PayPal indisponible pour le moment. Merci de choisir le paiement par carte.");
+    });
+
+    // Soumission formulaire paiement
+    document.getElementById('payment-form').addEventListener('submit', e => {
+      e.preventDefault();
+      const form = e.target;
+      if (form.checkValidity()) {
+        alert('Paiement effectué avec succès !');
+        paymentModal.hide();
+      } else {
+        form.reportValidity();
+      }
+    });
+  });
+</script>
+
+</footer>
+
+<!-- Bootstrap JS CDN -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+<script 
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+  integrity="sha384-ENjdO4Dr2bkBIFxQpeo5G6Vj6tA2M4ecxZ1Zr20E/qku82qA9T+6X/7kG3ni41iN" 
+  crossorigin="anonymous"
+></script>
+
+<script src="js/payment.js"></script>
+
+</body>
+</html>

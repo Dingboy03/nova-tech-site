@@ -1,0 +1,115 @@
+/* Navbar en fond noir */
+.navbar {
+  background-color: #000 !important; /* noir opaque */
+  box-shadow: none;
+  z-index: 10;
+}
+
+/* Animation de zoom arrière */
+@keyframes zoomOut {
+  from {
+    transform: scale(1.6); /* commence très zoomée */
+  }
+  to {
+    transform: scale(1); /* revient à taille normale */
+  }
+}
+
+/* Section hero (image + texte) */
+.hero-image {
+  position: relative;
+  height: 100vh;
+  margin-top: 56px; /* correspond à la hauteur de la navbar */
+  overflow: hidden;
+}
+
+/* L'image de fond zoomée */
+.hero-background {
+  background-image: url("../assets/drone2.jpeg");
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: zoomOut 5s ease-out forwards;
+  transform-origin: center center;
+  z-index: 0;
+  filter: brightness(0.6); /* fonce l’image */
+}
+
+/* Texte sur l’image */
+.hero-text {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding-top: 200px; /* plus bas qu’avant */
+  color: white;
+}
+
+.hero-text h2.display-4 {
+  font-size: 4rem;    /* plus grand */
+  font-weight: 700;   /* plus gras */
+}
+
+.hero-text .btn {
+  font-size: 1.25rem;  /* bouton plus grand */
+  padding: 0.75rem 2rem; /* bouton plus large et haut */
+}
+
+/* Animation zoom léger au survol */
+.hover-zoom {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.hover-zoom:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(13, 110, 253, 0.4); /* couleur bleu bootstrap */
+}
+
+/* Style pour l'icône puce électronique centrée */
+.icon-chip svg {
+  display: block;
+  margin: 0 auto;
+  stroke: #0d6efd; /* bleu bootstrap */
+  width: 40px;
+  height: 40px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+  color: #000000;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  animation: fadeInTop 1s ease-in-out;
+}
+
+.section-title::after {
+  content: '';
+  width: 60px;
+  height: 4px;
+  background-color: #000000;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -10px;
+  border-radius: 2px;
+}
+
+/* Animation d’apparition du titre */
+@keyframes fadeInTop {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
