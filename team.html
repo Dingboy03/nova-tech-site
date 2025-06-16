@@ -2,150 +2,72 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nova Tech - Équipe</title>
 
-  <link 
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
-    rel="stylesheet" 
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
-    crossorigin="anonymous"
-  />
-  
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
-  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+
   <style>
     body {
       font-family: 'Montserrat', sans-serif;
-      background-color: #f5f7fa;
-      color: #222;
     }
-    .navbar {
-      background-color: #0a2540 !important;
-    }
-    .navbar-brand {
+
+    .section-title {
+      font-size: 2.5rem;
       font-weight: 700;
-      font-size: 1.5rem;
-      letter-spacing: 1.5px;
-      color: #00a8ff !important;
-    }
-    .nav-link {
-      color: #cbd5e1 !important;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
-    .nav-link:hover, .nav-link.active {
-      color: #00a8ff !important;
+      margin-bottom: 2rem;
     }
 
-    .hero {
-      background: linear-gradient(rgba(10, 37, 64, 0.85), rgba(10, 37, 64, 0.85)), 
-                  url('img/team-hero.jpg') center/cover no-repeat;
-      height: 420px;
-      display: flex;
-      align-items: center;
-      color: white;
-      padding-left: 3rem;
-    }
-    .hero h1 {
-      font-size: 3.5rem;
-      font-weight: 900;
-      text-shadow: 0 2px 10px rgba(0,0,0,0.6);
-    }
-    .hero p {
-      font-size: 1.3rem;
-      font-weight: 400;
-      max-width: 600px;
-      text-shadow: 0 1px 8px rgba(0,0,0,0.5);
-    }
-
-    /* Section équipe */
-    .team-section {
-      padding: 4rem 0;
-      max-width: 1100px;
-      margin: 0 auto;
-      text-align: center;
-    }
-    .team-section h2 {
-      font-weight: 900;
-      font-size: 2.8rem;
-      margin-bottom: 2.5rem;
-      color: #0a2540;
-    }
-    .team-cards {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-    }
-    .team-card {
-      background: white;
-      border-radius: 15px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-      width: 260px;
-      padding: 1.5rem 1.2rem 2rem;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: default;
-    }
-    .team-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-    }
-    .team-photo {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
+    .card-img-top {
+      width: 150px;
+      height: 150px;
       object-fit: cover;
-      margin-bottom: 1rem;
-      border: 4px solid #00a8ff;
-      transition: transform 0.4s ease;
-    }
-    .team-card:hover .team-photo {
-      transform: scale(1.05);
-    }
-    .team-name {
-      font-weight: 700;
-      font-size: 1.3rem;
-      margin-bottom: 0.2rem;
-      color: #0a2540;
-    }
-    .team-role {
-      font-weight: 600;
-      font-size: 1rem;
-      color: #007acc;
-      margin-bottom: 1rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-    .team-bio {
-      font-size: 0.95rem;
-      color: #344054;
-      line-height: 1.5;
+      border-radius: 50%;
+      margin-top: 15px;
     }
 
-    /* Footer */
-    footer {
-      background-color: #0a2540;
-      color: #cbd5e1;
-      font-weight: 500;
-      font-size: 0.9rem;
-      padding: 1rem 0;
-      text-align: center;
+    .card {
+      min-width: 250px;
+      transition: transform 0.2s ease-in-out;
     }
 
-    @media (max-width: 768px) {
-      .team-cards {
-        flex-direction: column;
-        align-items: center;
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .scrolling-wrapper {
+      display: flex;
+      overflow-x: auto;
+      gap: 1rem;
+      scroll-behavior: smooth;
+      padding-bottom: 1rem;
+    }
+
+    .scrolling-wrapper::-webkit-scrollbar {
+      display: none;
+    }
+
+    @media (max-width: 576px) {
+      .card {
+        min-width: 200px;
+        font-size: 14px;
+      }
+
+      .card-img-top {
+        width: 100px;
+        height: 100px;
       }
     }
   </style>
 </head>
+
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="#">Nova Tech</a>
+      <a class="navbar-brand" href="#">Nova Tech</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -161,56 +83,79 @@
     </div>
   </nav>
 
-  <section class="hero mt-5">
-    <div class="container hero-content">
-      <h1>Rencontrez notre équipe</h1>
-      <p>Des passionnés d’innovation et de technologie dédiés à votre succès.</p>
+  <section class="py-5 bg-light" style="margin-top: 80px;">
+    <div class="container">
+      <h1 class="text-center section-title">Notre équipe</h1>
+      <div class="scrolling-wrapper">
+        <div class="card text-center shadow-sm">
+          <img src="assets/malick.jpg" alt="Portrait de Malick ILBOUDO" class="card-img-top img-fluid" />
+          <div class="card-body">
+            <h5 class="card-title">Malick ILBOUDO</h5>
+            <p class="text-primary">CEO & Fondatrice</p>
+            <p class="card-text">Malick dirige la section relation Nova Tech avec passion depuis 2022.</p>
+          </div>
+        </div>
+
+        <div class="card text-center shadow-sm">
+          <img src="assets/azania.jpg" alt="Portrait d'Azania YANOGO" class="card-img-top img-fluid" />
+          <div class="card-body">
+            <h5 class="card-title">Azania YANOGO</h5>
+            <p class="text-primary">CO Fondateur</p>
+            <p class="card-text">Azania dirige les solutions drones intelligentes.</p>
+          </div>
+        </div>
+
+        <div class="card text-center shadow-sm">
+          <img src="assets/sophie.jpg" alt="Portrait de Sophie Koné" class="card-img-top img-fluid" />
+          <div class="card-body">
+            <h5 class="card-title">Sophie Koné</h5>
+            <p class="text-primary">Responsable Marketing et RH</p>
+            <p class="card-text">Elle connecte Nova Tech à ses clients par le marketing.</p>
+          </div>
+        </div>
+
+        <div class="card text-center shadow-sm">
+          <img src="assets/elon.jpeg" alt="Portrait d'Elon Musk" class="card-img-top img-fluid" />
+          <div class="card-body">
+            <h5 class="card-title">Elon MUSK</h5>
+            <p class="text-primary">Ingénieur R&D</p>
+            <p class="card-text">Il développe des technologies innovantes pour les drones.</p>
+          </div>
+        </div>
+
+        <div class="card text-center shadow-sm">
+          <img src="assets/sam.jpeg" alt="Portrait d'Alman SAM" class="card-img-top img-fluid" />
+          <div class="card-body">
+            <h5 class="card-title">Alman SAM</h5>
+            <p class="text-primary">Ingénieur Logiciel</p>
+            <p class="card-text">Il développe des technologies intelligentes pour Nova Tech.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="team-section">
-    <h2>Notre équipe</h2>
-    <div class="team-cards">
-      <div class="team-card">
-        <img src="assets/team/alice.jpg" alt="Alice Dupont" class="team-photo" />
-        <div class="team-name">Alice Dupont</div>
-        <div class="team-role">CEO & Fondatrice</div>
-        <p class="team-bio">Alice dirige Nova Tech avec passion et vision depuis sa création en 2022. Experte en innovation agricole et management.</p>
-      </div>
-      <div class="team-card">
-        <img src="assets/team/karim.jpg" alt="Karim Traoré" class="team-photo" />
-        <div class="team-name">Karim Traoré</div>
-        <div class="team-role">CTO</div>
-        <p class="team-bio">Karim est le maître d’œuvre technique, responsable du développement des solutions drones intelligentes.</p>
-      </div>
-      <div class="team-card">
-        <img src="assets/team/sophie.jpg" alt="Sophie Koné" class="team-photo" />
-        <div class="team-name">Sophie Koné</div>
-        <div class="team-role">Responsable Marketing</div>
-        <p class="team-bio">Sophie supervise les stratégies marketing et la communication pour connecter Nova Tech à ses clients et partenaires.</p>
-      </div>
-      <div class="team-card">
-        <img src="assets/team/mamadou.jpg" alt="Mamadou Diallo" class="team-photo" />
-        <div class="team-name">Mamadou Diallo</div>
-        <div class="team-role">Ingénieur R&D</div>
-        <p class="team-bio">Mamadou conçoit et teste les technologies innovantes pour améliorer la performance et la fiabilité des drones Nova Tech.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
+  <footer class="bg-dark text-white text-center py-3 mt-5">
     <div class="container">
       <p class="mb-0">&copy; 2025 Nova Tech. Tous droits réservés.</p>
     </div>
   </footer>
 
-  <!-- Bootstrap JS -->
-  <script 
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
-    integrity="sha384-ENjdO4Dr2bkBIFxQpeo5G6Vj6tA2M4ecxZ1Zr20E/qku82qA9T+6X/7kG3ni41iN" 
-    crossorigin="anonymous"
-  ></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const scrollWrapper = document.querySelector('.scrolling-wrapper');
 
+    setInterval(() => {
+      const firstCard = scrollWrapper.children[0];
+      const cardWidth = firstCard.offsetWidth + 16; // card + gap
+
+      scrollWrapper.scrollBy({ left: cardWidth, behavior: 'smooth' });
+
+      setTimeout(() => {
+        scrollWrapper.appendChild(firstCard);
+        scrollWrapper.scrollLeft = 0;
+      }, 600);
+    }, 3000);
+  </script>
 </body>
 </html>
